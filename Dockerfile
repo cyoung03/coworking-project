@@ -10,11 +10,13 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install -r requirements.txt
 
 
-#copy everything from host current dir to the imaage current working directory
+#copy everything from anlaytics dir in host to the imaage current working directory
 COPY /analytics/ .
 
 #expose the app.py port
 EXPOSE 5153
 
 #Run command to start app.py when container starts
-CMD ["python3","app.py"]
+CMD ["python","app.py"]
+CMD python app.py
+
