@@ -17,7 +17,7 @@ port_number = int(os.environ.get("APP_PORT", 5153))
 def health_check():
     return "ok"
 
-
+#added .scalar() to fix function
 @app.route("/readiness_check")
 def readiness_check():
     try:
